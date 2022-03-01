@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: order
+  name: order
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: order
+    spec:
+      containers:
+      - image: order-ms:1.0.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        name: order-ms
+        resources: {}
+status: {}

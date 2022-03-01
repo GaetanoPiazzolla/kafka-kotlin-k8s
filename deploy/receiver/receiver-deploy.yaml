@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: receiver
+  name: receiver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: receiver
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: receiver
+    spec:
+      containers:
+      - image: receiver-ms:1.0.3
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        name: receiver-ms
+        resources: {}
+status: {}

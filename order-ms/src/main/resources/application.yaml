@@ -1,0 +1,7 @@
+spring:
+  kafka:
+    bootstrap-servers: kafka.kafka-ca1:9092
+
+tpd:
+  topic-name: order-topic-1
+  messages-per-request: 10

@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    consumer:
+      group-id: tpd-loggers
+      auto-offset-reset: earliest
+    bootstrap-servers: kafka.kafka-ca1:9092
+
+tpd:
+  topic-name: order-topic-1

@@ -11,6 +11,7 @@ import java.util.stream.StreamSupport
 @Service
 class OrderTopicListener {
 
+    // TODO should be static
     private val log = LoggerFactory.getLogger(this.javaClass)
 
     // TODO direct Json serialization does not work for a ClassNotFound. Maybe MessageData should have the same package.
@@ -30,7 +31,7 @@ class OrderTopicListener {
 
     @KafkaListener(
         topics = ["order-topic-1"],
-        containerFactory = "kafkaListenerStringContainerFactory"
+        containerFactory = "kafkaListenerStringContainerFactory",
     )
     fun kafkaListener(
         cr: ConsumerRecord<String, String>,

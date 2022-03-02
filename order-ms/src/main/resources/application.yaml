@@ -1,5 +1,6 @@
 spring:
   kafka:
+    # TODO should be a list of clusters ?
     bootstrap-servers: kafka.kafka-ca1:9092
 
 tpd:

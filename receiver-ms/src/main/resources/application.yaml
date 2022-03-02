@@ -2,7 +2,9 @@ spring:
   kafka:
     consumer:
       group-id: tpd-loggers
+      # we get all messages of the topic as soon as this consumer connect
       auto-offset-reset: earliest
+    # TODO should be a list of clusters ?
     bootstrap-servers: kafka.kafka-ca1:9092
 
 tpd:

@@ -16,6 +16,7 @@ class OrderController(
     @Value("\${tpd.messages-per-request}") private val messagesPerRequest: Int
 ) {
 
+    // TODO should be static
     private val log = LoggerFactory.getLogger(this.javaClass)
 
     @GetMapping("/")

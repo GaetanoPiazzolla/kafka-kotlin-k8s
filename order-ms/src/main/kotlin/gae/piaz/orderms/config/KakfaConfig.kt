@@ -19,6 +19,7 @@ class KakfaConfig(
     @Value("\${tpd.topic-name}") private val topicName: String
 ) {
 
+    // TODO should be static
     private val log = LoggerFactory.getLogger(this.javaClass)
 
     // Producer configuration
